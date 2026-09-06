@@ -1,6 +1,8 @@
 -- Library Management System Database Schema
 -- Compatible with MySQL / MariaDB (XAMPP)
 
+SET FOREIGN_KEY_CHECKS = 0;
+
 CREATE DATABASE IF NOT EXISTS `library_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `library_db`;
 
@@ -53,3 +55,5 @@ CREATE TABLE `transactions` (
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`) VALUES
 (1, 'System Administrator', 'admin@gmail.com', '$2y$10$bHmDRKwXA/G1hYXkcJK2pu8K1ivUorIveB7nSoOFeiXh/ggVi9Yz.', 'admin'),
 (2, 'Deep Student', 'deep@gmail.com', '$2y$10$2vtobMzX9oTa89b3gikWqOcVIpuuprJqTwb3yBXrN02UWBNwFI6Dm', 'user');
+
+SET FOREIGN_KEY_CHECKS = 1;
